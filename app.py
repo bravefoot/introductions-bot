@@ -40,7 +40,7 @@ def answer_message(event_data):
         return
     channels = skills.recommend(event["text"], corpus, limit=3)
     message = message_template.format(channels = channels)
-    slack_client.chat_postMessage(
+    slak_client.chat_postMessage(
         channel=event["channel"],
         thread_ts=event["ts"],
         link_names=True,
